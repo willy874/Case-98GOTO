@@ -1,0 +1,30 @@
+$grid-media-size: (
+  xs: 374px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px,
+);
+
+//**********
+// @media **
+//**********
+
+@mixin media-min($media) {
+  @media (min-width: $media) {
+    @content;
+  }
+}
+
+@mixin media-max($media) {
+  @media (max-width: $media) {
+    @content;
+  }
+}
+
+@mixin media-Range($minMedia, $maxMedia) {
+  @media (min-width: $minMedia) and (max-width: $maxMedia) {
+    @content;
+  }
+}

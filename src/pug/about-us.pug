@@ -1,0 +1,74 @@
+extends ./layout/index.pug
+
+block content
+  main.about.container.mb-5
+    section.container.h5.mb-5
+      .py-3
+      h2.header-primary.py-2.mb-5.text-center 服務項目
+      section.container.text-center.h5.mb-5
+        .d-flex.justify-content-center.py-2.fs-16.fs-md-24.fs-lg-30
+          span.flex-shrink-0.text-nowrap.service-list 商業店面
+          span.mx-1 |
+          span.flex-shrink-0.text-nowrap.service-list 住宅空間
+          span.mx-1 |
+          span.flex-shrink-0.text-nowrap.service-list 3D製圖
+        .d-flex.justify-content-center.py-2.fs-16.fs-md-24.fs-lg-30
+          span.flex-shrink-0.text-nowrap.service-list 室內設計
+          span.mx-1 |
+          span.flex-shrink-0.text-nowrap.service-list 裝修工程
+          span.mx-1 |
+          span.flex-shrink-0.text-nowrap.service-list 衛浴整修
+    section.container.h5.mb-5
+      h2.header-primary.py-2.mb-5.text-center 服務流程
+      .row
+        .col-12.col-sm-6.col-lg-3.py-4
+          .d-flex.align-items-center.pb-3.d-sm-block
+            .text-center.mr-3.pb-sm-3
+              img(src="./images/ServiceFlow_1.png", alt="")
+            h3.text-lg-center 1.初步洽談
+          .letter-spacing-2.font-weight-100 了解個案現況及業主需求，解說設計作業流程、設計費、工程管 理費及付款方式說明。
+        .col-12.col-sm-6.col-lg-3.py-4
+          .d-flex.align-items-center.pb-3.d-sm-block
+            .text-center.mr-3.pb-sm-3
+              img(src="./images/ServiceFlow_2.png", alt="")
+            h3.text-lg-center 2.現場勘查
+          .letter-spacing-2.font-weight-100 對工地現場及周遭環境，進行了解及勘察丈量，並拍照記錄相關資料，作為設計參考依據。
+        .col-12.col-sm-6.col-lg-3.py-4
+          .d-flex.align-items-center.pb-3.d-sm-block
+            .text-center.mr-3.pb-sm-3
+              img(src="./images/ServiceFlow_3.png", alt="")
+            h3.text-lg-center 3.平面配置
+          .letter-spacing-2.font-weight-100 依需求定訂設計風格及初步平面規劃，平面配置細節討論及確認。
+        .col-12.col-sm-6.col-lg-3.py-4
+          .d-flex.align-items-center.pb-3.d-sm-block
+            .text-center.mr-3.pb-sm-3
+              img(src="./images/ServiceFlow_4.png", alt="")
+            h3.text-lg-center 4.設計合約簽訂
+          .letter-spacing-2.font-weight-100 建材、材質討論與建議、設計細節討論，簽訂設計合約並收取設計費，繪製3D立體圖、設計施工圖、工程預算確認及工程進度討論。
+        .col-12.col-sm-6.col-lg-3.py-4
+          .d-flex.align-items-center.pb-3.d-sm-block
+            .text-center.mr-3.pb-sm-3
+              img(src="./images/ServiceFlow_5.png", alt="")
+            h3.text-lg-center 5.工程合約簽訂
+          .letter-spacing-2.font-weight-100 工程進度及施工期限確認，付款方式說明，簽訂工程合約。
+        .col-12.col-sm-6.col-lg-3.py-4
+          .d-flex.align-items-center.pb-3.d-sm-block
+            .text-center.mr-3.pb-sm-3
+              img(src="./images/ServiceFlow_6.png", alt="")
+            h3.text-lg-center 6.施工
+          .letter-spacing-2.font-weight-100 依據工程合約、報價單品項及進度表來進行工程，依合約付款方式收取階段費用。
+        .col-12.col-sm-6.col-lg-3.py-4
+          .d-flex.align-items-ce.pb-sm-3nter.pb-3.d-sm-block
+            .text-center.mr-3.pb-sm-3
+              img(src="./images/ServiceFlow_7.png", alt="")
+            h3.text-lg-center 7.完工驗收及交屋
+          .letter-spacing-2.font-weight-100 業主驗收交屋，收取工程尾款費用。
+        .col-12.col-sm-6.col-lg-3.py-4
+          .d-flex.align-items-center.pb-3.d-sm-block
+            .text-center.mr-3.pb-sm-3
+              img(src="./images/ServiceFlow_8.png", alt="")
+            h3.text-lg-center 8.結案及保固
+          .letter-spacing-2.font-weight-100 完成個案並展開保固服務。
+      .row 
+        .col-12.py-4.text-center
+          a.btn.btn-primary(href="./contact.html") 連絡我們

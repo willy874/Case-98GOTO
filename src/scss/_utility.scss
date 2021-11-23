@@ -1,0 +1,79 @@
+.will-change {
+  will-change: auto;
+}
+.img-cover {
+  object-fit: cover;
+  object-position: center;
+  border: 0;
+}
+.img-contain {
+  object-fit: contain;
+  object-position: center;
+  background-color: transparent;
+  border: 0;
+}
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+}
+.bg-contain {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+.flex-between {
+  align-items: center;
+  justify-content: space-between;
+}
+.position-inset {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.event-none {
+  pointer-events: none;
+}
+
+.focus-none {
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+}
+.p-100 {
+  padding-top: 100%;
+}
+.p-3by4 {
+  padding-top: 133%;
+}
+.p-4b3 {
+  padding-top: 75%;
+}
+.btn-icon {
+  border: 0;
+  color: $primary;
+  background-color: transparent;
+  &.text-info {
+    color: $info;
+  }
+  &.text-danger {
+    color: $danger;
+  }
+  &.text-warning {
+    color: $warning;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+  }
+}

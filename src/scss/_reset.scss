@@ -1,0 +1,38 @@
+body {
+  // font-family: 'Yozai', 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 500;
+}
+.font-weight-100 {
+  font-weight: 100;
+}
+.font-weight-300 {
+  font-weight: 300;
+}
+.font-weight-400 {
+  font-weight: 400;
+}
+.font-weight-500 {
+  font-weight: 500;
+}
+.font-weight-700 {
+  font-weight: 700;
+}
+.font-weight-900 {
+  font-weight: 9000;
+}
+* {
+  border-width: 0px;
+  border-style: solid;
+  &::after {
+    border-width: 0px;
+    border-style: solid;
+  }
+  &::before {
+    border-width: 0px;
+    border-style: solid;
+  }
+}
+a[href] {
+  text-decoration: none;
+}

@@ -1,0 +1,73 @@
+@for $i from 1 through 20 {
+  .fs-#{$i*2 + 10} {
+    font-size: $i * 0.125rem + 0.625rem;
+  }
+}
+@for $i from 1 through 10 {
+  .letter-spacing-#{$i} {
+    letter-spacing: $i * 1px;
+  }
+}
+@for $i from 1 through 10 {
+  .line-height-#{8+($i*2)} {
+    line-height: 0.8 + ($i * 0.2);
+  }
+}
+@for $i from 1 through 8 {
+  .fs-#{10+($i*2)} {
+    font-size: 10px + ($i * 2px);
+  }
+}
+@for $i from 1 through 6 {
+  .fs-#{26+($i*4)} {
+    font-size: 26px + ($i * 4px);
+  }
+}
+@each $media, $size in $grid-media-size {
+  @include media-min($size) {
+    @for $i from 1 through 8 {
+      .fs-#{$media}-#{10+($i*2)} {
+        font-size: 10px + ($i * 2px);
+      }
+    }
+    @for $i from 1 through 6 {
+      .fs-#{$media}-#{26+($i*4)} {
+        font-size: 26px + ($i * 4px);
+      }
+    }
+  }
+}
+
+
+@font-face {
+  font-family: 'Yozai';
+  src: url('font/Yozai-Light.ttf') format('truetype');
+  font-style:	normal;
+  font-stretch: normal;
+  font-weight: lighter;
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Yozai';
+  src: url('font/Yozai-Regular.ttf') format('truetype');
+  font-style:	normal;
+  font-stretch: normal;
+  font-weight: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Yozai';
+  src: url('font/Yozai-Medium.ttf') format('truetype');
+  font-style:	normal;
+  font-stretch: normal;
+  font-weight: bold;
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Yozai';
+  src: url('font/Yozai-Bold.ttf') format('truetype');
+  font-style:	normal;
+  font-stretch: normal;
+  font-weight: bolder;
+  font-weight: 700;
+}

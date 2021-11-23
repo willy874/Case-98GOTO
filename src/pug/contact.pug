@@ -1,0 +1,213 @@
+extends ./layout/index.pug
+
+block content
+  main.contact.container.mb-5
+    .py-3
+    form(action="" method="POST") 
+      section.container(style="max-width: 768px;")
+        .row
+          .col-12
+            h2.header-primary.py-2.mb-5.text-center
+              span.px-2.d-inline-block INQUIRY FORM 
+              span.px-2.d-inline-block 諮詢表
+        .row.py-3
+          .col-12
+            h3.h4.text-center.my-3 顧客資料填寫
+          .col-12
+            .row 
+              .col-auto.form-title.required.py-2 姓名
+              .col.py-2
+                input.form-control(type="text", name="name" required)
+                .invalid-feedback 請填寫姓名
+          .col-12
+            .row 
+              .col-auto.form-title.required.py-2 電子郵件
+              .col.py-2
+                input.form-control(type="email", name="email" required)
+                .invalid-feedback 請填寫電子郵件
+          .col-12
+            .row 
+              .col-auto.form-title.required.py-2 連絡電話
+              .col.py-2
+                input.form-control(type="phone", name="phone" required)
+                .invalid-feedback 請填寫電子連絡電話
+          .col-12
+            .row 
+              .col-auto
+                .row
+                  .col-auto.form-title.required.py-2 裝修經驗
+                  .col-auto.py-3
+                    .d-flex
+                      .form-check
+                        input#experience-y(type='radio' name='experience' value='true' required)
+                        label.form-check-label(for='experience-y') 是
+                      .form-check
+                        input#experience-n(type='radio' name='experience' value='false' required)
+                        label.form-check-label(for='experience-n') 否
+                  .invalid-feedback 請選擇是否有裝修經驗
+              .col-auto
+                .row
+                  .col-auto.form-title.py-2.text-lg-right 次數
+                  .col.py-2
+                    input.form-control(type="number", name="experience_count" required)
+                    .invalid-feedback 請填寫裝修經驗次數
+          .col-12
+            .row
+              .col-12.col-sm-6
+                .row
+                  .col-auto.form-title.py-2 聯絡時間
+                  .col.py-2
+                    select.custom-select(name='time')
+                      option(selected disabled) 請選擇
+                      option(value='0913') 9時 ~ 13時
+                      option(value='1317') 13時 ~ 17時
+                      option(value='1721') 17時 ~ 21時
+                      option(value='not') 不指定
+              .col-12.col-sm-6
+                .row
+                  .col-auto.form-title.py-2 星期
+                  .col.py-2
+                    select.custom-select(name='weekday')
+                      option(selected disabled) 請選擇
+                      option(value='1') 星期一
+                      option(value='2') 星期二
+                      option(value='3') 星期三
+                      option(value='4') 星期四
+                      option(value='5') 星期五
+                      option(value='6') 星期六
+                      option(value='0') 星期日
+                      option(value='not') 不指定
+        .row.py-3
+          .col-12
+            h3.h4.text-center.my-3 空間設計資料
+          .col-12
+            .row
+              .col-12.col-sm-6
+                .row
+                  .col-auto.form-title.py-2.required 空間類別
+                  .col.py-2
+                    select.custom-select(name='space' required)
+                      option(selected disabled) 請選擇
+                      option(value='別墅') 別墅
+                      option(value='店面') 店面
+                      option(value='新成屋') 新成屋
+                      option(value='預售屋') 預售屋
+                      option(value='公寓大廈') 公寓大廈
+                      option(value='獨棟透天') 獨棟透天
+                      option(value='工商廠辦') 工商廠辦
+                      option(value='其他') 其他
+              .col-12.col-sm-6
+                .row
+                  .col-auto.form-title.py-2.required 喜好風格
+                  .col.py-2
+                    select.custom-select(name='like' required)
+                      option(value='現代風') 現代風
+                      option(value='北歐風') 北歐風
+                      option(value='工業風') 工業風
+                      option(value='鄉村風') 鄉村風
+                      option(value='簡約風') 簡約風
+                      option(value='其他') 其他
+              .col-12.col-sm-6
+                .row
+                  .col-auto.form-title.py-2.required 預算金額
+                  .col.py-2
+                    select.custom-select(name='budget' required)
+                      option(selected disabled) 請選擇
+                      option(value='20萬~30萬') 20萬~30萬
+                      option(value='30萬~50萬') 30萬~50萬
+                      option(value='50萬~100萬') 50萬~100萬
+                      option(value='100萬~150萬') 100萬~150萬
+                      option(value='150萬~200萬') 150萬~200萬
+                      option(value='200萬~500萬') 200萬~500萬
+                      option(value='500萬~1000萬') 500萬~1000萬
+                      option(value='1000萬以上') 1000萬以上
+              .col-12.col-sm-6
+                .row
+                  .col-auto.form-title.py-2(style="width: 160px") 使用成員（人數）
+                  .col.py-2
+                    input.form-control(type="number", name="people_count")
+        .row.py-3
+          .col-12
+            h3.h4.text-center.my-3 預計規劃空間
+          .col-12
+            .row 
+              .col-auto.form-title.py-2.required 建案名稱
+              .col.py-2
+                input.form-control(type="text", name="build_case_name" required)
+          .col-12
+            .row 
+              .col-auto.form-title.py-2.required 建案地址
+              .col.py-2
+                input.form-control(type="text", name="build_case_address" required)
+          .col-12
+            .row 
+              .col-auto.form-title.py-2 需求簡述
+              .col.py-2
+                textarea.form-control(type="text", name="brief_description" rows="3")
+          .col-12
+            .row 
+              .col-4.col-sm.py-2
+                div 房數
+                input.form-control(type="number", name="bedroom")
+              .col-4.col-sm.py-2
+                div 廳數
+                input.form-control(type="number", name="living_room")
+              .col-4.col-sm.py-2
+                div 衛數
+                input.form-control(type="number", name="bathroom")
+              .col-4.col-sm.py-2
+                div 廚數
+                input.form-control(type="number", name="kitchen")
+              .col-4.col-sm.py-2
+                div 陽台
+                input.form-control(type="number", name="balcony")
+          .col-12
+            .row 
+              .col-12.col-sm-6
+                .row
+                  .col-auto.form-title.py-2.required 是否交屋
+                  .col.py-3.d-flex
+                    .form-check
+                      input#handover-y(type='radio' name='handover' value='true' required)
+                      label.form-check-label(for='handover-y') 是
+                    .form-check
+                      input#handover-n(type='radio' name='handover' value='false' required)
+                      label.form-check-label(for='handover-n') 否
+              .col-12.col-sm-6
+                .row
+                  .col-auto.form-title.py-2.required 能否勘場
+                  .col.py-3.d-flex
+                    .form-check
+                      input#site-survey-y(type='radio' name='site_survey' value='true' required)
+                      label.form-check-label(for='site_survey-y') 是
+                    .form-check
+                      input#site-survey-n(type='radio' name='site_survey' value='false' required)
+                      label.form-check-label(for='site-survey-n') 否
+              .col-12.col-sm-6
+                .row
+                  .col-auto.form-title.py-2 坪數
+                  .col.py-2
+                    select.custom-select(name='size')
+                      option(selected disabled) 請選擇
+                      option(value='30donw') 30坪以下
+                      option(value='30~40') 30~40坪
+                      option(value='40~60') 40~60坪
+                      option(value='60~100') 60~100坪
+                      option(value='100up') 100坪以上
+              .col-12.col-sm-6
+                .row
+                  .col-auto.form-title.py-2 相關檔案
+                  .col.py-2
+                    .custom-file
+                      input#file-data.custom-file-input(type='file' name='file')
+                      label.custom-file-label(for='file-data')
+        .row.border-top.justify-content-center.align-items-center
+          .col-auto.py-2 驗證碼
+          .col.py-3.d-flex(style="max-width: 300px")
+              input.form-control(type="text", name="verification")
+          .col-auto
+            a.verification(href="javascript:;")
+              img.verification-img(src="" alt="verification")
+        .row
+          .col-12.text-center.py-4
+            button.btn.btn-primary(type="submit") 確認送出
